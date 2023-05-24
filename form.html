@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción 2023</title>
+    <link rel="shortcut icon" href="./src/icopng.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./styles/forms.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="./src/fundacion el saber es libertad· (4).png" alt="logo fundacion">
+            </div>
+            <!-- <a href="" class="logo">Logo</a> -->
+            <div class="navigation">
+                <div class="nav-items">
+                    <i class="uil uil-times nav-close-btn"></i>
+                    <a href="./index.html"><i class="uil uil-home"></i>Inicio</a>
+                </div>
+            </div>
+            <i class="uil uil-bars nav-menu-btn"></i>
+        </div>
+    </header>
+    <main>
+        <div class="forms">
+            <h1>Formulario de Inscripción 2023</h1>        
+            <div>
+                <form id="formularioCursos" action="#" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="ingrese su nombre" required><br>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="ingrese su apellido" required><br>
+                    <label for="dni">DNI:</label>
+                    <input type="number" id="dni" name="dni" placeholder="ingrese su dni" required><br>
+                    <label for="fechaNac">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNac" name="fechaNac" required><br>
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" placeholder="ingrese su edad" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ingrese su email" required><br>
+                    <label for="telefono">Telefono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="ingrese su telefono" required><br>
+                    <label for="genero">Genero:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Selecciona una opcion</option>
+                        <option value="fem">femenino</option>
+                        <option value="masc">masculino</option>
+                        <option value="noDecirlo">Prefiero no decirlo</option>
+                    </select><br>
+                    <label for="direccion">Direccion:</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="ingrese su direccion" required><br>
+
+                    <label for="conectividad">Tipo de conectividad:</label>
+                    <select id="conectividad" name="conectividad" required>
+                        <option value="">Selecciona una opcion</option>
+                        <option value="fem">Datos Móviles - Teléfono</option>
+                        <option value="masc">Wifi</option>
+                    </select><br>
+
+                    <label for="estudios">Estudios Alcanzados:</label>
+                    <select id="estudios" name="estudios" required>
+                        <option value="">Selecciona una opcion</option>
+                        <option value="incompleto">Primario Incompleto </option>
+                        <option value="completo">Primario Completo</option>
+                        <option value="secIncompleto">Secundario Incompleto </option>
+                        <option value="secCompleto">Secundario Completo</option>
+                        <option value="superior">Superior</option>
+                    </select><br>
+                    <label for="curso">Curso:</label>
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecciona un curso</option>
+                        <option value="curso1">Carpinteria(Muebles) PRECONVOCATORIA 02/07 19Hs</option>
+                        <option value="curso2">Carpinteria (Wood Frame) - PRECONVOCATORIA 28/07 18Hs</option>
+                        <option value="curso3">Electricidad inmueble - PRECONVOCATORIA 27/07 18Hs</option>
+                        <option value="curso4">Torneria - PRECONVOCATORIA 02/07 18Hs</option>
+                        <option value="curso5">Electricidad Automotriz - PRECONVOCATORIA 27/07 18Hs</option>
+                        <option value="curso6">Soldador Basico - PRECONVOCATORIA 02/07 18Hs</option>
+                        <option value="curso7">Energia Renovable - PRECONVOCATORIA 27/07 18Hs</option>
+                        <option value="curso8">Mecanica de Motos - PRECONVOCATORIA 27/07 18Hs</option>
+                        <option value="curso9">Plomeria  - PRECONVOCATORIA 02/07 18Hs</option>
+                        <option value="curso10">Reparacion de Heladeras  - PRECONVOCATORIA 02/07 18Hs</option>
+                    </select><br>
+                    <div class="inputs">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Borrar">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="script/swiper-bundle.min.js"></script>
+    <script src="script/app.js"></script>
+
+    <br>
+    <a href="#" class="arriba">Ir arriba</a>
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="./src/logo 3.png" alt="logo de diseño">
+                    </a>
+                </figure>
+            </div>
+            <div class="grupo-2">
+                <small>&copy; 2023 <b>Sanchez De Bock & Delgado</b> - Todos los Derechos Reservados.</small>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
