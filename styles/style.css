@@ -1139,11 +1139,12 @@ section {
 
     .media-icons {
         right: 0;
-        margin-right: 50px;
+        margin-right: 5%;
     }
 
     .swiper-slide .text-content {
-        margin: 0 120px 0 50px;
+        margin: 0 0 0 50px;
+        margin-right: 14%;
     }
 
     .container {
@@ -1192,6 +1193,7 @@ section {
         margin: 500px auto 100px auto;
         border: 1px solid #ffffff40;
         margin-top: 80px;
+        height: auto;
     
     }
 
