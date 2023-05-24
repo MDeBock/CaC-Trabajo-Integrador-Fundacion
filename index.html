@@ -19,7 +19,7 @@
 
   <header>
     <div class="nav-bar">
-      <div class="logo">
+      <div id="logo">
         <img src="./src/fundacion el saber es libertad· (4).png" alt="logo fundacion">
       </div>
       <!-- <a href="" class="logo">Logo</a> -->
@@ -51,7 +51,7 @@
             <div class="text-content">
               <h2 class="title">Inserción <span>Laboral</span></h2>
               <p>Promovemos la inserción sociolaboral de los sectores de la comunidad de menores recursos</p>
-              <button class="read-btn" > <a href="#cursos">Leer mas</i></a><i class="uil uil-arrow-right"></i></button>
+              <button class="read-btn"><a href="#cursos">Leer mas</a><i class="uil uil-arrow-right"></i></button>
             </div>
           </div>
           <div class="swiper-slide dark-layer">
@@ -60,7 +60,7 @@
               <h2 class="title">Conoce <span>los cursos</span></h2>
               <p>Dictamos cursos de formación integral en oficios a medida en tu zona de influencia empresarial con
                 garantía de excelentes resultados. Contactanos</p>
-                <button class="read-btn" > <a href="#cursos">Leer mas</i></a><i class="uil uil-arrow-right"></i></button>
+              <button class="read-btn"> <a href="#cursos">Leer mas</a><i class="uil uil-arrow-right"></i></button>
             </div>
           </div>
 
@@ -75,7 +75,7 @@
         </div>
     </section>
 
-    <section id="nosotros" class="nosotros section">
+    <section id="nosotros" class="nosotros-section">
       <h1>Nosotros</h1>
       <h2>Promovemos la inserción Laboral</h2>
       <p>La Fundación Oficios es una organización sin fines de lucro creada a partir de la iniciativa de un grupo de
@@ -206,49 +206,62 @@
 
     <section id="contacto" class="contacto">
       <h2 class="titulo">Contacta <span> con nosotros</span></h2>
-      <div class="izquierda">
-        <p class="datos">
-          Si necesita ampliar la información sobre la Fundación <br> o alguno de nuestros cursos, por favor complete <br> el formulario.
-          O nos podes contactar por : <br><br>
-          Telefono <strong> 0387 464-6613</strong> <br><br>
-          Nuestra direccion: La Rioja 2430 <br> Salta - Argentina - Cp 4400 <br><br>
-          Email: <strong><a
-              href="mailto: fundacionelsabereslibertad@gmail.com">fundacionelsabereslibertad@gmail.com</a></strong>
-        </p>
+      <div id="div-contacto">
+        <div class="row">
+          <div>
+            <p class="datos">
+              Si necesita ampliar la información sobre la Fundación <br> o alguno de nuestros cursos, por favor complete
+              <br> el formulario.
+              O nos podes contactar por : <br><br>
+              Telefono <strong> 0387 464-6613</strong> <br><br>
+              Nuestra direccion: La Rioja 2430 <br> Salta - Argentina - Cp 4400 <br><br>
+              Email: <strong><a
+                  href="mailto: fundacionelsabereslibertad@gmail.com">fundacionelsabereslibertad@gmail.com</a></strong>
+            </p>
+          </div>
+          <div>
+            <script src="./script/swiper-bundle.min.js"></script>
+            <script src="./script/script.js"></script>
+            <script src="./script/app.js"></script>
+            <div id="map">
+              <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <form id="form" class="form">
+            <div class="form-control">
+              <label for="username">Nombre</label>
+              <input type="text" placeholder="ingrese su nombre" id="username" />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input type="email" placeholder="ingrese su email" id="email" />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <label for="telefono">Telefono</label>
+              <input type="tel" placeholder="ingrese su telefono" id="tel" />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <label for="consulta">Ingrese su consulta</label>
+              <textarea name="consulta" id="consulta"> consulta</textarea>
+            </div>
+            <button>Submit</button>
+          </form>
+        </div>  
       </div>
-      <div class="consultas">
-        <!-- <div class="form-contacto">
-              <h2>Crear cuenta</h2>
-          </div> -->
-        <form id="form" class="form">
-          <div class="form-control">
-            <label for="username">Nombre</label>
-            <input type="text" placeholder="ingrese su nombre" id="username" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="email">Email</label>
-            <input type="email" placeholder="ingrese su email" id="email" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="telefono">Telefono</label>
-            <input type="tel" placeholder="ingrese su telefono" id="tel" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="consulta">Ingrese su consulta</label>
-            <textarea name="consulta" id="consulta"> consulta</textarea>
-          </div>
-          <button>Submit</button>
-        </form>
-      </div>     
+
 
       <!-- <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.967021499708!2d-65.44152232778751!3d-24.796582759422915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc251ac5109a1%3A0xba59b9d0961e54c8!2sLa%20Rioja%202430%2C%20Salta!5e0!3m2!1ses!2sar!4v1684197961304!5m2!1ses!2sar"
@@ -259,29 +272,20 @@
     </section>
 
   </main>
-  
 
-<!-- Se consume el API GOOGLE MAPS -->
-  <script src="./script/swiper-bundle.min.js"></script>
-  <script src="./script/script.js"></script>
-  <script src="./script/app.js"></script>
-  <div id="map">
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
-  </div>
 
-  <br>
-  <a href="#" class="arriba">Ir arriba</a>
+  <!-- Se consume el API GOOGLE MAPS -->
+
 
   <footer class="pie-pagina">
     <div class="grupo-1">
-      <div class="box">
+      <!-- <div class="box">
         <figure>
           <a href="#">
             <img src="./src/logo 3.png" alt="logo de diseño">
           </a>
         </figure>
-      </div>
+      </div> -->
       <div class="grupo-2">
         <small>&copy; 2023 <b>Sanchez De Bock & Delgado</b> - Todos los Derechos Reservados.</small>
 

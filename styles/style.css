@@ -41,13 +41,26 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    height: 100vh;
-    background: rgb(47, 50, 56);
-    background: linear-gradient(90deg, rgba(47, 50, 56, 1) 0%, rgba(47, 50, 56, 1) 61%, rgba(107, 69, 69, 1) 100%);
-
+.nav-bar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    transition: 0.3s ease;
 }
 
+/* Logo de la fundacion */
+#logo {
+    display: flex;
+    height: 140px;
+}
+
+body {
+    height: 100vh;    
+    background: linear-gradient(90deg, rgba(47, 50, 56, 1) 0%, rgba(47, 50, 56, 1) 61%, rgba(107, 69, 69, 1) 100%);    
+}
 
 /*header*/
 header {
@@ -64,6 +77,7 @@ header {
     transition-property: height, background;
 }
 
+/*efecto en nav bar*/
 header.sticky {
     height: calc(2.5rem + 3rem);
     background: rgba(255, 255, 255, 0.1);
@@ -71,32 +85,14 @@ header.sticky {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Logo de la fundacion */
-.logo {
-    display: flex;
-}
 
-.logo img {
-    height: 150px;
-}
-
-
-header .nav-bar {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 200px;
-    transition: 0.3s ease;
-}
-
+/* manu hamburguesa*/
 .nav-close-btn,
 .nav-menu-btn {
     display: none;
 }
 
-.nav-bar .logo {
+/* .nav-bar .logo {
     color: var(--claro);
     font-size: 1.8em;
     font-weight: 600;
@@ -104,7 +100,7 @@ header .nav-bar {
     text-transform: uppercase;
     text-decoration: none;
     text-shadow: var(--text-shadow);
-}
+} */
 
 /* menu de la pagina*/
 
@@ -151,6 +147,9 @@ header .nav-bar {
 }
 
 /*background slider - imagenes de portada */
+
+
+
 .bg-slider {
     z-index: 777;
     position: relative;
@@ -279,7 +278,7 @@ header .nav-bar {
     flex-direction: column;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 90px;
+    margin-left: 5%;
 }
 
 .media-icons a {
@@ -291,30 +290,49 @@ header .nav-bar {
 /* segunda seccion donde esta mision - vision*/
 
 
+.nosotros-section {
+    color: #fff;
+    background: #703333;
+    padding: 3% 4%;
+    transition: 0.3s ease;
+}
 
-.nosotros h1 {
+.nosotros-section h1 {
     font-size: 3em;
     font-weight: 600;
-    margin-top: 50px;
+    margin-top: 5%;
     text-align: center;
 }
 
-.nosotros h2 {
+.nosotros-section h2 {
     font-size: 1.5em;
     font-weight: 300;
+    margin: 1% 0%;    
 }
 
-.nosotros p {
-    margin: 25px 0;
+.nosotros-section:before {
+    z-index: 888;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, var(--scroll-thumb-hover-color));
 }
 
+.cursos {
+    background: linear-gradient(90deg, rgba(47, 50, 56, 1) 0%, rgba(47, 50, 56, 1) 61%, rgba(107, 69, 69, 1) 100%);  
+    color: #fff;    
+    padding: 3% 4%;
+    transition: 0.3s ease;    
+}
 
 .cursos h1 {
-    font-family: "Raleway", sans-serif;
     font-size: 3em;
-    font-weight: 800;
+    font-weight: 600;
+    margin-top: 5%;
     text-align: center;
-    color: #fff;
 }
 
 /* Letra y efecto subrayado del texto formulario*/
@@ -325,10 +343,11 @@ header .nav-bar {
     font-weight: 800;
     text-align: center;
     color: #fff;
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
-    left: 35%;
-    top: 35%;
+    /* left: 35%;
+    top: 35%; */
+    padding: 0% 0% 3% 0%;
 
 
 }
@@ -355,7 +374,7 @@ header .nav-bar {
 /* Imagenes delos cursos*/
 
 .container {
-    margin: 30px;
+    margin: 1%;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
@@ -364,7 +383,7 @@ header .nav-bar {
 .row {
     width: 100%;
     /* display: flex; */
-    justify-content: space-around;
+    justify-content: center;
     /* flex-wrap: wrap; */
 }
 
@@ -372,13 +391,14 @@ header .nav-bar {
     background: #ce0d0d;
     position: relative;
     flex: 1;
-    max-width: 350px;
+    max-width: 100%;
     height: 250px;
-    margin: 20px;
+    margin: 1%;
     overflow: hidden;
 }
 
 .image img {
+    width: 100%;
     opacity: 0.8;
     position: relative;
     vertical-align: top;
@@ -426,11 +446,19 @@ header .nav-bar {
     transform: translateY(-160px);
 }
 
-
+.cursos:before {
+    z-index: 888;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, var(--scroll-thumb-hover-color));
+}
 .donaciones {
     background-color: #703333;
-    color: #fff;
-    padding: 35px 0px;
+    color: #fff;    
     transition: 0.3s ease;
     /* background-image: url(https://images.pexels.com/photos/1602726/pexels-photo-1602726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
     background-repeat: no-repeat;
@@ -447,7 +475,7 @@ header .nav-bar {
     height: 500px;
     border-radius: 6px;
     box-shadow: 0 10px 30px #999595;
-    margin: 200px auto;
+    margin: 7% auto;
     border: 1px solid #ffffff40;
 
 }
@@ -466,8 +494,6 @@ header .nav-bar {
     font-weight: 800;
     text-align: center;
     color: #fff;
-
-
 }
 
 .donaciones h2 {
@@ -579,14 +605,9 @@ section {
     position: relative;
 }
 
-.section {
-    color: #fff;
-    background: #703333;
-    padding: 35px 200px;
-    transition: 0.3s ease;
-}
 
-.section:before {
+
+/* .section:before {
     z-index: 888;
     content: '';
     position: absolute;
@@ -595,15 +616,24 @@ section {
     bottom: 0;
     left: 0;
     background: linear-gradient(transparent, var(--scroll-thumb-hover-color));
-}
+} */
 
 
 
 .contacto {
-    padding: 100px;
-    background: rgb(47, 50, 56);
+    padding: 3% 4%;
     background: linear-gradient(90deg, rgba(47, 50, 56, 1) 0%, rgba(47, 50, 56, 1) 61%, rgba(107, 69, 69, 1) 100%);
+}
 
+#div-contacto{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start; */
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    gap: 20px;
 }
 
 .contacto .titulo {
@@ -612,17 +642,11 @@ section {
     font-weight: 800;
     text-align: center;
     color: #fff;
+    /* margin-top: 3.5%; */
+    margin: 3.5%;
 }
 
-.izquierda {
-    width: 300px;
-    height: auto;
-    /* overflow: hidden; */
-    border: 0px solid;
-    float: left;
-    padding: 20px;
 
-}
 
 .datos {
     font-family: "Raleway", sans-serif;
@@ -630,14 +654,12 @@ section {
     font-weight: 100;
     color: #fff;
     text-align: justify;
-    width: 650px;
-    padding: 0px;
-    margin: 80px;
+    width: 100%;
+    padding: 2.5%;   
     border-radius: 6px;
-    box-shadow: 0 10px 30px #999595;
-    margin: 400px auto;
+    box-shadow: 0 10px 30px #999595;    
     border: 1px solid #ffffff40;
-    margin-top: 80px;
+    /* margin-top: 4%; */
 }
 
 .datos {
@@ -656,35 +678,16 @@ section {
     text-align: left;
     text-decoration: none;
 
-}
-
-.form-contacto {
-    font-family: "Raleway", sans-serif;
-    font-size: 1em;
-    font-weight: 900;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
 
 }
+
+
 
 .datos:hover a {
     text-decoration: underline;
 }
 
-.form-contacto {
-    display: flex;
-    min-height: 100vh;
-    float: right;
-    margin: 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0 0.3);
-    overflow: hidden;
-    width: 400px;
-    max-width: 100%;
-    flex-direction: column;
 
-}
 
 .consultas {
     width: 300px;
@@ -700,18 +703,20 @@ section {
 
 
 .form {
-    padding: 30px 40px;
+    width: 100%;
+    padding: 2%;
     border-radius: 6px;
     box-shadow: 0 10px 30px #999595;
-    margin: 200px auto;
+    /* margin: 4% auto; */
     border: 1px solid #ffffff40;
+    
 
 }
 
 .form-control {
     margin-bottom: 10px;
     padding-bottom: 30px;
-    position: relative;
+    position: relative;    
 }
 
 .form-control label {
@@ -738,6 +743,7 @@ section {
     font-size: 14px;
     padding: 10px;
     width: 100%;
+    height: 200px;
 }
 
 .form-control input:focus {
@@ -806,16 +812,16 @@ section {
 }
 
 #map {
-    width: 60%;
-    height: 500px;
+    width: 100%;
+    height: 300px;
     /* overflow: hidden; */
-    padding: 80px 0px opx;
-    position: fixed;
-    top: -300px;
-    left: 80px;
+    /* padding: 80px 0px opx; */
+    /* position: fixed; */
+    /* margin-top: -24%;   */
     border-radius: 6px;
     box-shadow: 0 10px 30px #999595;
     border: 1px solid #ffffff40;
+    margin-top: 3%;
 }
 
 .arriba {
@@ -830,6 +836,7 @@ section {
 .pie-pagina {
     width: 100%;
     background: #703333;
+    
 
 }
 
@@ -849,14 +856,16 @@ section {
 }
 
 .pie-pagina .grupo-1 .box figure img {
+    margin-top: 5%;
     width: 250px;
 }
 
 .pie-pagina .grupo-2 {
     background-color: #4e2828;
-    padding: 15px 10px;
+    padding: 0% 4%;
     text-align: center;
     color: #fff;
+    margin-top: 6%;
 }
 
 .pie-pagina .grupo-2 small {
@@ -867,113 +876,16 @@ section {
 
 
 /*TABLET???*/
-@media screen and (max-width:1100px) {
-    header .nav-bar {
-        padding: 0 50px;
-    }
+@media (max-width:992px) {
 
-    .section {
-        padding: 25px 50px;
-    }
 
-    .media-icons {
-        right: 0;
-        margin-right: 50px;
-    }
-
-    .swiper-slide .text-content {
-        margin: 0 120px 0 50px;
-    }
-
-    .container {
-        margin: 0px;
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 20px;
-    }
-
-    .image {
-        background: #ce0d0d;
-        position: relative;
-        flex: 1;
-        width: 350px;
-        height: 250px;
-        margin: 55px;
-        justify-content:space-evenly;
-        overflow: hidden;
-        right: -50px;
-    }
-
-    .image img {
-        opacity: 0.8;
-        position: relative;
-        vertical-align: top;
-        transition: 0.6s;
-        transition-property: opacity;
-    }
-
-    .donacion {
-        width: 700px;
-        height: 700px;
-        border-radius: 6px;
-        box-shadow: 0 10px 30px #999595;
-        margin: 500px auto;
-        border: 1px solid #ffffff40;
-        margin-top: 80px;
-    
-    }
-    
-
-}
-
-/*CELULARES??*/
-
-@media screen and (max-width:758px) {
-    header .nav-bar {
-        padding: 25px 20px;
-    }
-
-    .section {
-        padding: 25px 20px;
-    }
-
-    .media-icons {
-        margin-right: 20px;
-    }
-
-    .media-icons a {
-        font-size: 1.5em;
-    }
-
-    .swiper-slide .text-content {
-        margin: 0 70px 0 20px;
-    }
-
-    .swiper-slide .text-content .title {
-        font-size: 3em;
-    }
-
-    .swiper-slide .text-content .title span {
-        font-size: 0.35em;
-    }
-
-    .swiper-slide .text-content p {
-        font-size: 0.9em;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        font-weight: 200;
-        top: 80%
-    }
-
-    /*navegacion menu*/
 
     .nav-menu-btn {
         display: block;
         color: var(--claro);
         font-size: 1.5em;
         cursor: pointer;
+        margin-right: 5%;
     }
 
     .nav-close-btn {
@@ -1045,75 +957,42 @@ section {
         margin-right: 5px;
     }
 
-    .swiper-slide .text-content .read-btn {
-        font-size: 0.9em;
-        padding: 5px 15px;
+    header .nav-bar {
+        padding: 0px;
+        justify-content: space-between;
     }
 
-    .about h1 {
-        font-size: 1.5em;
+    .section {
+        padding: 25px 50px;
     }
 
-
-    .about h2 {
-        font-size: 1.0em;
+    .media-icons {
+        right: 0;
+        margin-right: 50px;
     }
 
-    .about p {
-        font-size: 0.5em;
+    .swiper-slide .text-content {
+        margin: 0 120px 0 50px;
     }
-
-    .cursos h1 {
-        font-family: "Raleway", sans-serif;
-        font-size: 3em;
-        font-weight: 800;
-        text-align: center;
-        color: #fff;
-    }
-
-    /* Letra y efecto subrayado del texto formulario*/
-
-    .formulario {
-        font-family: "Raleway", sans-serif;
-        font-size: 1em;
-        font-weight: 800;
-        text-align: left;
-        color: #fff;
-        display: inline-block;
-        position: relative;
-        left: 35%;
-        top: 35%;
-        left: 50px;
-
-
-    }
-
-
-    /* Imagenes delos cursos*/
 
     .container {
-        margin: 0px;
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
+        margin: 5% 0%;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0.8%;
         
-        }
-
-    .row {
-        width: 100%;
-        /* display: flex; */
-        justify-content: space-around;
-        /* flex-wrap: wrap; */
     }
 
     .image {
         background: #ce0d0d;
         position: relative;
         flex: 1;
-        max-width: 350px;
-        height: 250px;
-        margin: 20px;
+        width: 100%;
+        /* height: 250px; */
+        /* margin: 55px; */
+        justify-content:space-evenly;
         overflow: hidden;
+        /* right: -50px; */
     }
 
     .image img {
@@ -1123,153 +1002,229 @@ section {
         transition: 0.6s;
         transition-property: opacity;
     }
-
-   
-    .image .details {
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        right: 0;
-        color: #fff;
-        width: 100%;
-        height: 100%;
-
-
-    }
-
-    .donaciones {
-        background-color: #703333;
-        color: #fff;
-        padding: 35px 0px;
-        transition: 0.3s ease;
-        /* background-image: url(https://images.pexels.com/photos/1602726/pexels-photo-1602726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        width: 100%;
+/* 
+    .formulario{
         display: flex;
-        align-items: center;
-    }
-    
+        text-align: center;
+    } */
+
+    /* .row{
+        display: flex;
+        align-items: center;  
+        flex-direction: column;     
+    } */
+
+
+
     .donacion {
-        width: 400px;
-        height: 700px;
+        width: 90%;
         border-radius: 6px;
         box-shadow: 0 10px 30px #999595;
-        margin: 500px auto;
+        margin: 500px auto 100px auto;
         border: 1px solid #ffffff40;
         margin-top: 80px;
     
     }
-    
-    /* imagen de mercado pago */
-    
+
     .donaciones .imagen img {
-        width: 400px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        width: 50%;
     }
 
-    .izquierda {
-        padding: 1px;
+    .datos {
+        font-size: 1.1em;     
     }
 
+    /* #map {
+       width: 80%;
+    } */
     
-.contacto {
-    padding: 100px;
-    background: rgb(47, 50, 56);
-    background: linear-gradient(90deg, rgba(47, 50, 56, 1) 0%, rgba(47, 50, 56, 1) 61%, rgba(107, 69, 69, 1) 100%);
+    .pie-pagina .grupo-2 {
+        margin-top: 63px;
+    }   
+    
 
 }
 
+/*CELULARES??*/
 
-.datos {
-    font-size: 1.2em;
-    font-weight: 100;
-    width: 500px;
-    padding: 0px;
-    margin: 400px auto;
-    margin-top: 80px;
-}
+@media (max-width:576px) {
 
 
 
-.consultas {
-    width: 300px;
-    height: auto;
-    /* overflow: hidden; */
-    border: 0px solid;
-    padding: 0px;
-    margin-top: 0px;
-
-}
-
-
-
-.form {
-    padding: 30px 40px;
-    border-radius: 6px;
-    box-shadow: 0 10px 30px #999595;
-    margin: 150px auto;
-    border: 1px solid #ffffff40;
-    margin-top: -235px;
-    display: flex;
-    flex-direction: column;
-    float: left;
-    align-items: center;
-
-
-}
-
-.direccion {
-    font-family: "Raleway", sans-serif;
-    font-size: 1em;
-    font-weight: 100;
-    color: #fff;
-    text-align: left;
-    text-decoration: none;
-}
-
-#map {
-    width: 80%;
-    height: 450px;
-    top: -100px;
-  
-}
-
-.arriba {
-    font-size: 0.8em;
-}
-
-
-.pie-pagina .grupo-1 .box figure img {
-    width: 120px;
-}
-
-
-
-.pie-pagina .grupo-2 small {
-    font-size: 10px;
-}
-
-
-   
-}
-
-
-@media screen and (max-width:1100px) {
-    .image {
-        flex: 100%;
-        max-width: 480px;
+    .nav-menu-btn {
+        display: block;
+        color: var(--claro);
+        font-size: 1.5em;
+        cursor: pointer;
+        margin-right: 5%;
     }
-}
 
+    .nav-close-btn {
+        display: block;
+        color: var(--claro);
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.3em;
+        margin: 10px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
 
-@media screen and (max-width:800px) {
-    .pie-pagina .grupo-1 {
+    .navigation {
+        z-index: 99999;
+        position: fixed;
         width: 100%;
-        margin: auto;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease;
     }
+
+    .navigation.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navigation .nav-items {
+        position: relative;
+        background: #741212;
+        width: 400px;
+        max-width: 300px;
+        display: grid;
+        place-content: center;
+        margin: 20px;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: var(--box-shasow);
+        transform: translateY(-100px);
+        transition: 0.3s ease;
+    }
+
+    .navigation.navigation.active .nav-items {
+        transform: translateY(0);
+    }
+
+    .navigation .nav-items a {
+        color: #fff;
+        font-size: 1em;
+        margin: 15px 50px;
+        transition: 0.3s ease;
+    }
+
+    .navigation .nav-items a:hover {
+        color: var(--oscuro);
+    }
+
+    .navigation .nav-items a i {
+        display: inline-block;
+        font-size: 1.3em;
+        margin-right: 5px;
+    }
+
+    header .nav-bar {
+        padding: 0px;
+        justify-content: space-between;
+    }
+
+    .section {
+        padding: 25px 50px;
+    }
+
+    .media-icons {
+        right: 0;
+        margin-right: 50px;
+    }
+
+    .swiper-slide .text-content {
+        margin: 0 120px 0 50px;
+    }
+
+    .container {
+        margin: 5% 0%;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .image {
+        background: #ce0d0d;
+        position: relative;
+        flex: 1;
+        width: 100%;
+        /* height: 250px; */
+        /* margin: 55px; */
+        justify-content:space-evenly;
+        overflow: hidden;
+        /* right: -50px; */
+    }
+
+    .image img {
+        opacity: 0.8;
+        position: relative;
+        vertical-align: top;
+        transition: 0.6s;
+        transition-property: opacity;
+    }
+/* 
+    .formulario{
+        display: flex;
+        text-align: center;
+    } */
+
+    /* .row{
+        display: flex;
+        align-items: center;       
+    } */
+
+
+
+    .donacion {
+        width: 90%;
+        border-radius: 6px;
+        box-shadow: 0 10px 30px #999595;
+        margin: 500px auto 100px auto;
+        border: 1px solid #ffffff40;
+        margin-top: 80px;
+    
+    }
+
+    .donaciones .imagen img {
+        width: 50%;
+    }
+
+    #div-contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .datos {
+        font-size: 1.1em;  
+        width: 100%;
+        text-align: center;   
+    }
+
+    .form {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    #map {
+        margin-top: 10%; 
+        width: 100%;
+        
+    }
+    
+    .pie-pagina .grupo-2 {
+        margin-top: 63px;
+    }       
+    
 
 }
